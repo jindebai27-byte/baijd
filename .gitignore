@@ -1,0 +1,67 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.vinext/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+next-env.d.ts
+/dist/
+/.wrangler/
+/outputs/
+/work/
+
+# Local visual experiments and superseded exports (not used by the live site)
+/public/hero-cinematic-glass.mp4
+/public/hero-liquid-metal.mp4
+/public/hero-black-liquid-source.mp4
+/public/hero-tech-tunnel.mp4
+/public/hero-glass-flow.mp4
+/public/hero-cinematic-glass-web.mp4
+/public/hero-tech-tunnel-poster.jpg
+/public/hero-glass-tunnel-poster.jpg
+/public/hero-glass-flow-poster.jpg
+/public/hero-liquid-metal-poster.jpg
+/public/hero-cinematic-glass-poster.jpg
+/public/smart-phone-plinth-hero.png
+/public/smart-handheld-hero.png
+/public/case-studies/competitor-aosu.png
+/public/case-studies/competitor-eufy.png
+/public/case-studies/other/qihang/beijing-detail.png
+/public/case-studies/other/qihang/math-detail.png
+/public/case-studies/other/qihang/school-poster.png
+/public/case-studies/other/qihang/summer-poster.png
+/public/case-studies/other/qihang/trial-popup.png
+/public/case-studies/other/qihang/summer-popup.png
+/public/case-studies/other/qihang/school-popup.png
+/public/case-studies/other/spring-privileges.png
