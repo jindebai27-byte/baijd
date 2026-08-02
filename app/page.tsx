@@ -1491,7 +1491,11 @@ function CaseEnd({ next, href }: { next: string; href: string }) {
 }
 
 export default function Portfolio() {
-  const path = typeof window === "undefined" ? "/" : window.location.pathname;
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const pathname = typeof window === "undefined" ? "/" : window.location.pathname;
+  const path = basePath && pathname.startsWith(basePath)
+    ? pathname.slice(basePath.length) || "/"
+    : pathname;
   useSiteMotion(path);
   if (path === "/project/smart-life-botslab") return <SmartCase />;
   if (path === "/project/h600") return <H600Case />;
