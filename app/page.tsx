@@ -11,6 +11,15 @@ const projectIndex = [
   { no: "04", slug: "other", title: "其他设计", sub: "运营活动 / 品牌视觉 / AIGC 探索", tone: "violet" },
 ];
 
+const softwareSkills = [
+  { key: "ps", name: "Photoshop", detail: "图像合成 · 视觉设计", mark: "Ps" },
+  { key: "ae", name: "After Effects", detail: "动态设计 · 影像表达", mark: "Ae" },
+  { key: "figma", name: "Figma", detail: "产品设计 · 协作交付", mark: "" },
+  { key: "sketch", name: "Sketch", detail: "界面设计 · 组件系统", mark: "" },
+  { key: "midjourney", name: "Midjourney", detail: "AIGC 视觉探索", mark: "MJ" },
+  { key: "codex", name: "Codex", detail: "AI 开发 · 原型落地", mark: ">_" },
+];
+
 function useSiteMotion(routeKey: string) {
   useEffect(() => {
     const root = document.documentElement;
@@ -148,7 +157,7 @@ function HomePage() {
         <div className="pf-profile-head"><h2>关于我<em>About me</em></h2><p>你好，我是白金德，一名拥有 6 年经验的 UI 设计师与 AI 设计实践者。</p></div>
         <div className="pf-profile-main">
           <div className="pf-avatar"><img src="/bai-jinde-portrait.jpg" alt="白金德个人照片" /><span>BAI JINDE / PORTRAIT</span></div>
-          <div className="pf-bio"><h3>以体验为核心，<br />让设计真正创造价值。</h3><p>深耕移动端产品设计，覆盖智能家居、教育与社交工具等行业。我将 AI 融入需求评审、视觉探索与交付落地全链路，用数据与反馈驱动设计决策。</p><div className="pf-numbers"><article><strong>06</strong><span>年设计经验</span></article><article><strong>200+</strong><span>组件与图标</span></article><article><strong>40%</strong><span>AI 工作流提效</span></article></div><div className="pf-contact-grid"><a href="mailto:714927114@qq.com"><span>邮箱</span><b>714927114@qq.com</b><Arrow /></a><a href="tel:+8615698402071"><span>电话</span><b>15698402071</b><Arrow /></a><a href="#thanks"><span>所在地</span><b>北京 / 中国</b><Arrow /></a></div></div>
+          <div className="pf-bio"><h3>以体验为核心，<br />让设计真正创造价值。</h3><p>深耕移动端产品设计，覆盖智能家居、教育与社交工具等行业。我将 AI 融入需求评审、视觉探索与交付落地全链路，用数据与反馈驱动设计决策。</p><div className="pf-numbers"><article><strong>06</strong><span>年设计经验</span></article><article><strong>200+</strong><span>组件与图标</span></article><article><strong>40%</strong><span>AI 工作流提效</span></article></div><div className="pf-contact-grid"><a href="mailto:714927114@qq.com"><span>邮箱</span><b>714927114@qq.com</b><Arrow /></a><a href="tel:+8615698402071"><span>电话</span><b>15698402071</b><Arrow /></a><a href="#thanks"><span>所在地</span><b>北京 / 中国</b><Arrow /></a></div><div className="pf-software"><div className="pf-software-head"><span>技能软件</span><small>DESIGN &amp; AI TOOLKIT</small></div><div className="pf-software-grid">{softwareSkills.map((tool) => <article key={tool.key}><span className={`pf-software-icon is-${tool.key}`} aria-hidden="true"><i>{tool.mark}</i></span><div><b>{tool.name}</b><small>{tool.detail}</small></div></article>)}</div></div></div>
         </div>
         <div className="pf-timeline"><article><span>2024—2026</span><h4>360 智慧生活产品线</h4><p>智慧生活 / H600 / Botslab</p></article><article><span>2023—2024</span><h4>启航教育科技</h4><p>教育 APP / AI 学习体系 / 鸿蒙</p></article><article><span>2020—2023</span><h4>浙江迅游科技</h4><p>移动端产品 / 0—1 产品设计</p></article></div>
       </section>
