@@ -140,13 +140,13 @@ function HomePage() {
           <div className="pf-rail"><span><i /> BAI JINDE / DESIGNER</span><span>视觉 · AI · 品牌</span><span>2026</span></div>
           <div className="pf-ai-copy">
             <h1 style={{ animationDelay: ".2s" }}>BAI JINDE<span> AI</span></h1>
-            <h2 style={{ animationDelay: ".4s" }}>UI 设计师 / 视觉设计师 / AI 设计师</h2>
-            <p style={{ animationDelay: ".55s" }}>专注于数字产品体验、视觉系统与 AI 创意实践，以清晰的交互逻辑、克制的视觉表达和高效的智能工作流，打造兼具体验品质与商业价值的数字产品。</p>
+            <h2 style={{ animationDelay: ".4s" }}>产品体验设计师 / UI 设计师</h2>
+            <p style={{ animationDelay: ".55s" }}>6 年移动端产品设计经验，长期参与智能家居与教育产品，从需求梳理、交互框架、视觉系统到研发验收完整推进；并以 AIGC 与 Codex 加速探索、原型和交付。</p>
             <div className="pf-ai-actions" style={{ animationDelay: ".7s" }}>
               <BorderGlow className="pf-action-glow pf-action-primary" edgeSensitivity={34} glowColor="119 65 64" backgroundColor="rgba(4, 234, 0, .11)" borderRadius={5} glowRadius={6} glowIntensity={0.25} coneSpread={8} colors={["#9cff98", "#36d957", "#e6ffe8"]} fillOpacity={0}><a href="#thanks">联系我</a></BorderGlow>
               <BorderGlow className="pf-action-glow pf-action-secondary" edgeSensitivity={34} glowColor="0 0 100" backgroundColor="rgba(255, 255, 255, .055)" borderRadius={5} glowRadius={6} glowIntensity={0.18} coneSpread={8} colors={["#ffffff", "#aebdb9", "#dcecff"]} fillOpacity={0}><a href="#catalog">查看作品</a></BorderGlow>
             </div>
-            <small style={{ animationDelay: ".85s" }}>6 年设计经验 · 北京 · 智能家居 / 教育 / 品牌视觉</small>
+            <small style={{ animationDelay: ".85s" }}>6 年产品设计经验 · 北京 · 智能家居 / 教育科技 / AI 工作流</small>
           </div>
           <div className="pf-cover-foot"><span>PORTFOLIO / 2026</span><p>设计不止于画面，而是连接用户、产品与品牌的完整表达。</p><a href="#profile">向下探索 ↓</a></div>
         </div>
@@ -154,12 +154,22 @@ function HomePage() {
 
       <section className="pf-profile pf-shell" id="profile">
         <div className="pf-page-rail"><span><i /> ABOUT ME</span><span>个人介绍</span><span>25.0%</span></div>
-        <div className="pf-profile-head"><h2>关于我<em>About me</em></h2><p>你好，我是白金德，一名拥有 6 年经验的 UI 设计师与 AI 设计实践者。</p></div>
+        <div className="pf-profile-head"><h2>关于我<em>About me</em></h2><p>你好，我是白金德，一名拥有 6 年经验的产品体验与 UI 设计师。</p></div>
         <div className="pf-profile-main">
           <div className="pf-avatar"><img src="/bai-jinde-portrait.jpg" alt="白金德个人照片" /><span>BAI JINDE / PORTRAIT</span></div>
-          <div className="pf-bio"><h3>以体验为核心，<br />让设计真正创造价值。</h3><p>深耕移动端产品设计，覆盖智能家居、教育与社交工具等行业。我将 AI 融入需求评审、视觉探索与交付落地全链路，用数据与反馈驱动设计决策。</p><div className="pf-numbers"><article><strong>06</strong><span>年设计经验</span></article><article><strong>200+</strong><span>组件与图标</span></article><article><strong>40%</strong><span>AI 工作流提效</span></article></div><div className="pf-contact-grid"><a href="mailto:714927114@qq.com"><span>邮箱</span><b>714927114@qq.com</b><Arrow /></a><a href="tel:+8615698402071"><span>电话</span><b>15698402071</b><Arrow /></a><a href="#thanks"><span>所在地</span><b>北京 / 中国</b><Arrow /></a></div><div className="pf-software"><div className="pf-software-head"><span>技能软件</span><small>DESIGN &amp; AI TOOLKIT</small></div><div className="pf-software-grid">{softwareSkills.map((tool) => <article key={tool.key}><span className={`pf-software-icon is-${tool.key}`} aria-hidden="true"><i>{tool.mark}</i></span><div><b>{tool.name}</b><small>{tool.detail}</small></div></article>)}</div></div></div>
+          <div className="pf-bio"><h3>以体验为核心，<br />让设计真正创造价值。</h3><p>我擅长把复杂业务转化为清晰、可执行的产品体验：先理解用户任务与商业目标，再完成信息架构、关键流程、视觉规范和研发验收。AI 是提升研究、发散与原型效率的工具，最终判断仍回到用户价值和落地质量。</p><div className="pf-numbers"><article><strong>06</strong><span>年产品设计经验</span></article><article><strong>04</strong><span>代表项目</span></article><article><strong>03</strong><span>核心业务方向</span></article></div><div className="pf-contact-grid"><a href="mailto:714927114@qq.com"><span>邮箱</span><b>714927114@qq.com</b><Arrow /></a><a href="tel:+8615698402071"><span>电话</span><b>15698402071</b><Arrow /></a><a href="#thanks"><span>所在地</span><b>北京 / 中国</b><Arrow /></a></div><div className="pf-software"><div className="pf-software-head"><span>技能软件</span><small>DESIGN &amp; AI TOOLKIT</small></div><div className="pf-software-grid">{softwareSkills.map((tool) => <article key={tool.key}><span className={`pf-software-icon is-${tool.key}`} aria-hidden="true"><i>{tool.mark}</i></span><div><b>{tool.name}</b><small>{tool.detail}</small></div></article>)}</div></div></div>
         </div>
-        <div className="pf-timeline"><article><span>2024—2026</span><h4>360 智慧生活产品线</h4><p>智慧生活 / H600 / Botslab</p></article><article><span>2023—2024</span><h4>启航教育科技</h4><p>教育 APP / AI 学习体系 / 鸿蒙</p></article><article><span>2020—2023</span><h4>浙江迅游科技</h4><p>移动端产品 / 0—1 产品设计</p></article></div>
+        <div className="pf-timeline"><article><span>2024—2026</span><h4>神州数码信息服务集团股份有限公司</h4><p>长期驻场 360 集团智慧生活产品线 · 智慧生活 / H600 / Botslab</p></article><article><span>2023—2024</span><h4>启航教育科技</h4><p>教育 APP / AI 学习体系 / 鸿蒙</p></article><article><span>2020—2023</span><h4>浙江迅游科技</h4><p>移动端产品 / 0—1 产品设计</p></article></div>
+      </section>
+
+      <section className="pf-role-proof pf-shell" aria-labelledby="role-proof-title">
+        <div className="pf-role-proof-head"><div><small>ROLE &amp; CONTRIBUTION</small><h2 id="role-proof-title">我在项目中，<br />具体解决什么。</h2></div><p>不只展示最终画面，也说明我承担的角色、关键判断与实际交付，让作品与岗位能力直接对应。</p></div>
+        <div className="pf-role-proof-grid">
+          <article><span>01 / BOTSLAB</span><h3>全球家庭安防体验</h3><p>负责核心体验架构、首页及关键功能 UI、双品牌视觉统一，并协同研发完成多语言与多设备状态落地。</p><b>体验架构 · UI 系统 · 研发协作</b></article>
+          <article><span>02 / H600</span><h3>车载场景交互设计</h3><p>围绕驾驶安全和低分心原则重组操作层级，建立后视镜端视觉系统，并持续跟进页面适配与验收。</p><b>场景分析 · 交互设计 · 页面验收</b></article>
+          <article><span>03 / 启航教育</span><h3>学习与转化链路</h3><p>覆盖首页、学习、题库、会员与活动页面，在学习效率、信息密度和商业转化之间建立统一体验。</p><b>核心页面 · 增长设计 · AI 辅助体验</b></article>
+          <article><span>04 / AI WORKFLOW</span><h3>把创意快速做成 Demo</h3><p>使用 Midjourney、Figma 与 Codex 完成概念发散、可交互原型和 Vibe Coding 演示，同时保持设计判断与交付质量。</p><b>AIGC · 原型验证 · Vibe Coding</b></article>
+        </div>
       </section>
 
       <section className="pf-catalog pf-shell" id="catalog">
@@ -680,7 +690,7 @@ function SmartCaseLegacy() {
       </div>
     </div></section>
     </>}
-    <section className="case-section pf-shell"><div className="case-label">06 / 结果与沉淀</div><div className="case-content"><div className="case-results"><article><strong>5 → 3</strong><span>核心路径缩短</span></article><article><strong>+25%</strong><span>首页控制点击率</span></article><article><strong>−40%</strong><span>视觉交付周期</span></article><article><strong>200+</strong><span>图标与组件</span></article></div></div></section><CaseEnd next="H600 行车记录仪" href="/project/h600" />
+    <section className="case-section pf-shell"><div className="case-label">06 / 结果与沉淀</div><div className="case-content"><div className="case-results"><article><strong>05</strong><span>核心功能模块</span></article><article><strong>02</strong><span>品牌产品体验</span></article><article><strong>01</strong><span>统一视觉语言</span></article><article><strong>200+</strong><span>图标与组件资产</span></article></div></div></section><CaseEnd next="H600 行车记录仪" href="/project/h600" />
   </main>;
 }
 
