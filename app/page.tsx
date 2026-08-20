@@ -177,7 +177,7 @@ function HomePage() {
         <div className="pf-catalog-head"><h2>作品目录<em>Contents</em></h2><p>点击目录进入独立项目页面，查看完整设计过程与核心页面分析。</p></div>
         <div className="pf-catalog-showcase">
           <div className="pf-project-menu">
-            {projectIndex.map((item, index) => <a className={`pf-project-link ${index === activeProject ? "is-active" : ""}`} href={`/project/${item.slug}`} key={item.slug} onMouseEnter={() => setActiveProject(index)} onFocus={() => setActiveProject(index)} aria-current={index === activeProject ? "true" : undefined}>
+            {projectIndex.map((item, index) => <a className={`pf-project-link ${index === activeProject ? "is-active" : ""}`} href={`/?project=${item.slug}`} key={item.slug} onMouseEnter={() => setActiveProject(index)} onFocus={() => setActiveProject(index)} aria-current={index === activeProject ? "true" : undefined}>
               <span>{item.no}.</span><div><h3>{item.title}</h3><p>{item.sub}</p></div><i><Arrow /></i>
             </a>)}
           </div>
@@ -690,7 +690,7 @@ function SmartCaseLegacy() {
       </div>
     </div></section>
     </>}
-    <section className="case-section pf-shell"><div className="case-label">06 / 结果与沉淀</div><div className="case-content"><div className="case-results"><article><strong>05</strong><span>核心功能模块</span></article><article><strong>02</strong><span>品牌产品体验</span></article><article><strong>01</strong><span>统一视觉语言</span></article><article><strong>200+</strong><span>图标与组件资产</span></article></div></div></section><CaseEnd next="H600 行车记录仪" href="/project/h600" />
+    <section className="case-section pf-shell"><div className="case-label">06 / 结果与沉淀</div><div className="case-content"><div className="case-results"><article><strong>05</strong><span>核心功能模块</span></article><article><strong>02</strong><span>品牌产品体验</span></article><article><strong>01</strong><span>统一视觉语言</span></article><article><strong>200+</strong><span>图标与组件资产</span></article></div></div></section><CaseEnd next="H600 行车记录仪" href="/?project=h600" />
   </main>;
 }
 
@@ -862,7 +862,7 @@ function H600Case() {
         </div>
       </section>
 
-      <CaseEnd next="启航教育" href="/project/qihang" />
+      <CaseEnd next="启航教育" href="/?project=qihang" />
     </main>
   );
 }
@@ -1116,7 +1116,7 @@ function QihangCase() {
         </div>
       </section>
 
-      <CaseEnd next="其他设计" href="/project/other" />
+      <CaseEnd next="其他设计" href="/?project=other" />
     </main>
   );
 }
@@ -1483,8 +1483,8 @@ function OtherCase() {
 }
 
 const secondaryData: Record<string, { no: string; title: string; subtitle: string; accent: string; intro: string; chapters: string[]; next: string; nextHref: string; visual: string }> = {
-  h600: { no: "02", title: "H600 后视镜行车记录仪", subtitle: "SMART HARDWARE / DRIVING SAFETY / MOBILE APP", accent: "#2f7cff", intro: "围绕设备连接、实时画面、行车记录与视频回看，建立车载智能硬件的移动端体验。", chapters: ["设备连接与首次使用", "实时画面与行车状态", "录像检索与证据回看"], next: "启航教育", nextHref: "/project/qihang", visual: "H600" },
-  qihang: { no: "03", title: "启航教育 AI 学习体验", subtitle: "EDTECH / AI LEARNING / HARMONYOS", accent: "#ff7139", intro: "面向教育场景重组课程、学习任务与 AI 辅助功能，并完成移动端产品体验与鸿蒙适配。", chapters: ["学习目标与任务拆解", "课程信息架构", "AI 学习辅助体验"], next: "其他设计", nextHref: "/project/other", visual: "AI EDU" },
+  h600: { no: "02", title: "H600 后视镜行车记录仪", subtitle: "SMART HARDWARE / DRIVING SAFETY / MOBILE APP", accent: "#2f7cff", intro: "围绕设备连接、实时画面、行车记录与视频回看，建立车载智能硬件的移动端体验。", chapters: ["设备连接与首次使用", "实时画面与行车状态", "录像检索与证据回看"], next: "启航教育", nextHref: "/?project=qihang", visual: "H600" },
+  qihang: { no: "03", title: "启航教育 AI 学习体验", subtitle: "EDTECH / AI LEARNING / HARMONYOS", accent: "#ff7139", intro: "面向教育场景重组课程、学习任务与 AI 辅助功能，并完成移动端产品体验与鸿蒙适配。", chapters: ["学习目标与任务拆解", "课程信息架构", "AI 学习辅助体验"], next: "其他设计", nextHref: "/?project=other", visual: "AI EDU" },
   other: { no: "04", title: "其他设计与视觉探索", subtitle: "OPERATION / BRAND VISUAL / AIGC", accent: "#a56dff", intro: "集合运营活动、品牌视觉、图标组件与 AIGC 实践，呈现产品项目之外的视觉能力与探索。", chapters: ["智慧生活运营活动", "品牌与营销视觉", "AIGC 创意实验"], next: "返回目录", nextHref: "/#catalog", visual: "MORE" },
 };
 
@@ -1499,8 +1499,8 @@ function SecondaryCase({ slug }: { slug: keyof typeof secondaryData }) {
 }
 
 function CaseEnd({ next, href }: { next: string; href: string }) {
-  const isH600 = href === "/project/h600";
-  const isQihang = href === "/project/qihang";
+  const isH600 = href.includes("project=h600");
+  const isQihang = href.includes("project=qihang");
   return <section className={`case-end${isH600 ? " case-end-h600" : ""}${isQihang ? " case-end-qihang" : ""}`}>
     <span>{isH600 ? "NEXT PROJECT / 02 · SMART HARDWARE" : isQihang ? "NEXT PROJECT / 03 · AI EDUCATION" : "NEXT PROJECT"}</span>
     {isH600 && <div className="case-end-h600-device" aria-hidden="true"><img src="/case-studies/h600/h600-drive-single.png" alt="" /><i /><i /><b>REC</b><small>4K UHD · ADAS · GPS</small></div>}
@@ -1512,9 +1512,11 @@ function CaseEnd({ next, href }: { next: string; href: string }) {
 export default function Portfolio() {
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
   const pathname = typeof window === "undefined" ? "/" : window.location.pathname;
-  const path = basePath && pathname.startsWith(basePath)
+  const pathnameRoute = basePath && pathname.startsWith(basePath)
     ? pathname.slice(basePath.length) || "/"
     : pathname;
+  const project = typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get("project");
+  const path = project ? `/project/${project}` : pathnameRoute;
   useSiteMotion(path);
   if (path === "/project/smart-life-botslab") return <SmartCase />;
   if (path === "/project/h600") return <H600Case />;
