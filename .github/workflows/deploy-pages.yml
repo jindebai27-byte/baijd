@@ -39,7 +39,12 @@ jobs:
         run: pnpm run build:pages
 
       - name: Add SPA route fallback
-        run: cp dist/pages/index.html dist/pages/404.html
+        run: |
+          cp dist/pages/index.html dist/pages/404.html
+          for route in smart-life-botslab h600 qihang other; do
+            mkdir -p "dist/pages/project/$route"
+            cp dist/pages/index.html "dist/pages/project/$route/index.html"
+          done
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
