@@ -38,6 +38,9 @@ jobs:
       - name: Build GitHub Pages site
         run: pnpm run build:pages
 
+      - name: Add SPA route fallback
+        run: cp dist/pages/index.html dist/pages/404.html
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
