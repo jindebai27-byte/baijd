@@ -60,6 +60,7 @@ for (const file of await collectTextFiles(fileURLToPath(pagesDir))) {
     source = source.replace(new RegExp(`(?<!${repositoryBase})/${escapedRoot}`, "g"), `${repositoryBase}/${root}`);
   }
   source = source.replace(new RegExp(`(?<!${repositoryBase})/project/`, "g"), `${repositoryBase}/project/`);
+  source = source.replace(new RegExp(`(?<!${repositoryBase})/\\?project=`, "g"), `${repositoryBase}/?project=`);
   source = source.replace(new RegExp(`(?<!${repositoryBase})/#catalog`, "g"), `${repositoryBase}/#catalog`);
   source = source.replace(/href:`\/`/g, `href:\`${repositoryBase}/\``);
   source = source.replace(/href:"\/"/g, `href:"${repositoryBase}/"`);
